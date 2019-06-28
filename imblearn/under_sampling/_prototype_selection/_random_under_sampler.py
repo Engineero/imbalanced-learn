@@ -103,7 +103,7 @@ RandomUnderSampler # doctest: +NORMALIZE_WHITESPACE
         y = check_array(y, accept_sparse=['csr', 'csc'], dtype=None,
                         ensure_2d=False, allow_nd=True)
         check_consistent_length(X, y)
-        return X, y, binarize_y
+        return X, y, None
 
     def _fit_resample(self, X, y):
         if self.return_indices:
