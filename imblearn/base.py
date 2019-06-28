@@ -75,11 +75,11 @@ class SamplerMixin(BaseEstimator, metaclass=ABCMeta):
         """
         self._deprecate_ratio()
 
-        check_classification_targets(y)
-        X, y, binarize_y = self._check_X_y(X, y)
+        #check_classification_targets(y)
+        X, y, _ = self._check_X_y(X, y)
 
-        self.sampling_strategy_ = check_sampling_strategy(
-            self.sampling_strategy, y, self._sampling_type)
+        #self.sampling_strategy_ = check_sampling_strategy(
+        #    self.sampling_strategy, y, self._sampling_type)
 
         output = self._fit_resample(X, y)
 
