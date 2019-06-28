@@ -101,7 +101,7 @@ RandomUnderSampler # doctest: +NORMALIZE_WHITESPACE
         X = check_array(X, accept_sparse=['csr', 'csc'], dtype=None,
                         allow_nd=True)
         y = check_array(y, accept_sparse=['csr', 'csc'], dtype=None,
-                        ensure_2d=False)
+                        ensure_2d=False, allow_nd=True)
         check_consistent_length(X, y)
         return X, y, binarize_y
 
